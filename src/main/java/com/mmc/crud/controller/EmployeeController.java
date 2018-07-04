@@ -151,11 +151,11 @@ public class EmployeeController {
         //这不是一个分页查询
         //引入分页插件
         //在查询之前只需要调用
-        PageHelper.startPage(pn,6);
+        PageHelper.startPage(pn,5);
 
         List<Employee> emps = employeeService.getAll();
         //使用pageInfo包装查询后的结果
-        PageInfo page = new PageInfo(emps,6);
+        PageInfo page = new PageInfo(emps,5);
         return Msg.success().add("pageInfo",page);
     }
 
